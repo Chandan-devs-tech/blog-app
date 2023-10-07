@@ -34,6 +34,19 @@ RSpec.describe User, type: :model do
       end
     end
 
+    context 'Custom Method: #set_post_counter_zero' do
+      it 'should set post_counter to 0 when post_counter is nil' do
+        user = User.new(name: 'Chandan')
+        user.set_post_counter_zero
+        expect(user.post_counter).to eq(0)
+      end
+      it 'should not change post_counter if it is already set' do
+        user = User.new(name: 'Benyamin', post_counter: 3)
+        user.set_post_counter_zero
+        expect(user.post_counter).to eq(3)
+      end
+    end
+
     context 'User Method #three_recent_posts' do
       it 'return the three_recent_posts for a user' do
         first_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',

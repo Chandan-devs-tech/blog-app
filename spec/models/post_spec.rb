@@ -71,5 +71,31 @@ RSpec.describe Post, type: :model do
         expect(post.five_recent_comments_post).to_not include(comment1)
       end
     end
+
+    context 'Custom Method: #set_counters_to_zero' do
+      it 'should set comments_counter to 0 when comments_counter is nil' do
+        post = Post.new(title: 'My name is Chandan')
+        post.set_counters_to_zero
+        expect(post.comments_counter).to eq(0)
+      end
+
+      it 'should set likes_counter to 0 when likes_counter is nil' do
+        post = Post.new(title: 'I am from India')
+        post.set_counters_to_zero
+        expect(post.likes_counter).to eq(0)
+      end
+
+      it 'should not change comments_counter if it is already set' do
+        post = Post.new(title: 'I like to code!', comments_counter: 3)
+        post.set_counters_to_zero
+        expect(post.comments_counter).to eq(3)
+      end
+
+      it 'should not change likes_counter if it is already set' do
+        post = Post.new(title: 'That is all', likes_counter: 40)
+        post.set_counters_to_zero
+        expect(post.likes_counter).to eq(40)
+      end
+    end
   end
 end

@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /posts" do
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /posts' do
     context 'Get #index' do
       before(:each) do
         get '/users/7/posts'
       end
-
-      it "returns a 200 status code" do
+      it 'returns a 200 status code' do
         expect(response).to have_http_status(:success)
       end
 
@@ -20,12 +19,11 @@ RSpec.describe "Posts", type: :request do
       end
     end
 
-    context "Get #show" do
+    context 'Get #show' do
       before(:each) do
         get '/users/7/posts/8'
       end
-      
-      it "returns a 200 status code" do
+      it 'returns a 200 status code' do
         expect(response).to have_http_status(:success)
       end
 

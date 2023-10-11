@@ -6,7 +6,6 @@ RSpec.describe 'Users', type: :request do
       before(:each) do
         get '/users'
       end
-
       it 'returns a 200 status code' do
         expect(response).to have_http_status(:success)
       end
@@ -24,11 +23,9 @@ RSpec.describe 'Users', type: :request do
       before(:each) do
         get '/users/7'
       end
-
       it 'returns a 200 status code' do
         expect(response).to have_http_status(:success)
       end
-
 
       it 'open the show template' do
         expect(response).to render_template(:show)

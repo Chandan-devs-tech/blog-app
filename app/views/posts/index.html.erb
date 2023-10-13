@@ -1,1 +1,16 @@
-<h1>Show all posts for a specific user</h1>
+<div class="all-post-container">
+    <%= render partial: 'users/user', locals: { user: @user } %>
+    <div class="posts-container">
+        <% @posts.each do |post|%>
+            <div class="post-comments-container">
+                <%= render partial: 'posts/post', locals: { post: post } %>
+                <div class="comments-container">
+                    <% post.five_recent_comments_post.each do |comment| %>
+                        <p class="post-comment"><%= @user.name %>: <%= comment.text %></p>
+                    <%end%>
+                </div>
+            </div>
+        <%end%>
+    </div>
+    <button class="see-all-post-btn">Pagination</button>
+</div>

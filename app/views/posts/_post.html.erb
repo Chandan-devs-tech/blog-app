@@ -1,0 +1,7 @@
+<div class="user-post">
+    <a href="<%= user_post_path(@user,post) %>" class="post-desc">
+        <h3 class="user-post-title"><%= post.title%></h3>
+    </a>
+    <p class="user-post-partial"><%= post.text%></p>
+    <div class="user-post-counter">Comments: <%= post.comments_counter %>, Like: <%= post.likes_counter %></div>
+</div>

@@ -1,15 +1,178 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* users#index styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.users-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 60px 0;
+}
+
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  list-style-type: none;
+}
+
+.user-item {
+  width: 100%;
+  text-align: center;
+}
+
+.img-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+}
+
+img {
+  border: 1px solid black;
+  width: 150px;
+  height: 115px;
+  border-radius: 5px;
+}
+
+.user-info-container {
+  border: 1px solid black;
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.user-post-num {
+  padding-top: 35px;
+}
+
+/* users#show styles */
+
+.user-post-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  margin: 60px 0;
+}
+
+.user-bio-container {
+  border: 1px solid black;
+  width: 64%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.user-post {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  width: 64%;
+}
+
+.user-post-bio {
+  padding: 10px;
+}
+
+.user-post-bio-para {
+  padding: 10px;
+}
+
+.list-of-posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.post-desc {
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
+}
+
+.user-post-partial {
+  margin: 10px 0;
+}
+
+.user-post-counter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.see-all-post-btn {
+  margin-top: 20px;
+  padding: 8px 12px;
+}
+
+/* posts#index styles */
+
+.all-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  list-style-type: none;
+  margin: 60px 0;
+}
+
+.posts-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 55px;
+}
+
+.comments-container {
+  border: 1px solid black;
+  padding: 10px;
+  width: 64%;
+}
+
+.post-comments-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* posts#show styles */
+
+.all-comments-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.list-of-comments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 64%;
+  padding: 10px;
+  border: 1px solid black;
+}

@@ -176,3 +176,10 @@ img {
   padding: 10px;
   border: 1px solid black;
 }
+
+.flash-msg {
+  text-align: center;
+  font-size: 20px;
+  color: green;
+  margin-top: 20px;
+}

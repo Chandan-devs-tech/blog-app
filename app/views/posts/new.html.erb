@@ -1,0 +1,17 @@
+<h1>This is posts #new page</h1>
+
+<%= form_for :post, url: user_posts_path(@user) do |form|%>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :text %>
+        <%= form.text_field :text %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<%end%>

@@ -1,0 +1,12 @@
+<h1>This is comments #new page</h1>
+
+<%= form_for :comment, url: user_post_comments_path(@user, @post) do |form|%>
+    <div>
+        <%= form.label :text %>
+        <%= form.text_area :text %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<%end%>

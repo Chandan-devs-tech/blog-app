@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "PostIndices", type: :feature do
-   before :each do
+RSpec.feature 'PostIndices', type: :feature do
+  before :each do
     @user = User.create(name: 'Bala', bio: 'Doctor from Turkey',
                         photo: 'https://img.freepik.com/kitten.jpg', post_counter: 2)
     @post1 = Post.create(author_id: @user.id, title: 'Post #1',
@@ -34,8 +34,8 @@ RSpec.feature "PostIndices", type: :feature do
     expect(page).to have_content("Comments: #{@post1.comments_counter}")
     expect(page).to have_content("Comments: #{@post2.comments_counter}")
     # I can see how many likes a post has
-    expect(page).to have_content("Likes: #{@post1.likes_counter}")
-    expect(page).to have_content("Likes: #{@post2.likes_counter}")
+    expect(page).to have_content("Like: #{@post1.likes_counter}")
+    expect(page).to have_content("Like: #{@post2.likes_counter}")
     # I can see a section for pagination if there are more posts than fit on the view
     expect(page).to have_content('Pagination')
     # When I click on a post, it redirects me to that post's show page

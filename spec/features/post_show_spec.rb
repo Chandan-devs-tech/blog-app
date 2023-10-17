@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.feature "PostShows", type: :feature do
-   before :each do
+RSpec.feature 'PostShows', type: :feature do
+  before :each do
     @user = User.create(name: 'Marial', bio: 'Engineer from US',
-                         photo: 'https://adorable-kitten.jpg',
-                         post_counter: 2)
+                        photo: 'https://adorable-kitten.jpg',
+                        post_counter: 2)
 
     @post = Post.create(author_id: @user.id, title: 'Post #1',
                         text: 'First', comments_counter: 3, likes_counter: 0)
@@ -23,10 +23,10 @@ RSpec.feature "PostShows", type: :feature do
     # I can see how many comments it has
     expect(page).to have_content("Comments: #{@post.comments_counter}")
     # I can see how many likes it has
-    expect(page).to have_content("Likes: #{@post.likes_counter}")
+    expect(page).to have_content("Like: #{@post.likes_counter}")
     # I can see the post body
     expect(page).to have_content(@post.text)
-    within('.post-comments-container') do
+    within('.list-of-comments') do
       # I can see the username of each commentor
       expect(page).to have_content(@user.name)
       # I can see the comment each commentor left

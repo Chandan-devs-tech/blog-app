@@ -233,3 +233,17 @@ input[type="submit"] {
   width: 100%;
   padding: 8px;
 }
+
+.notice {
+  color: green;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.alert {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+}

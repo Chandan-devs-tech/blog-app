@@ -192,7 +192,9 @@ img {
 
 /* LogIn/signUp form */
 
-.log_in_container, .forget_password_container {
+.log_in_container,
+.forget_password_container,
+.change_password_container {
   display: flex;
   flex-direction: column;
   justify-content: center;

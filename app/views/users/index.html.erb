@@ -1,8 +1,11 @@
-<h1>List of all users</h1>
+<h1 class="title">List of all users</h1>
 <div class="users-main-container">
     <ul class="users-list-container">
         <% @users.each do |user| %> 
             <%= render partial: 'users/user', locals: { user: user } %>
         <%end%>
     </ul>
+    <% if user_signed_in? %>
+        <%= link_to "Log Out", sign_out_user_path, method: :delete %>
+    <%end%>
 </div>

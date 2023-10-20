@@ -1,7 +1,9 @@
-<h1>This is posts#new page</h1>
+<div class="new-like-container">
+    <h1>This is posts#new page</h1>
 
-<%= form_for :like, url: user_post_likes_path(@user, @post) do |form|%>
-    <div>
-        <%= form.submit %>
-    </div>
-<%end%>
+    <%= form_for :like, url: user_post_likes_path(@user, @post) do |form|%>
+        <div>
+            <%= form.submit %>
+        </div>
+    <%end%>
+</div>

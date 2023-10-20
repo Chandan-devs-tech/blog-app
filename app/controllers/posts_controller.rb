@@ -29,6 +29,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = current_user
+    @post = Post.includes(:likes).find(params[:id])
+    if @post.author == @user || @user.role == 'admin'
+      @post.likes.destroy_all
+      @post.comments.destroy_all
+      @post.destroy!
+      flash[:notice] = 'Post successfully deleted.'
+    else
+      flash[:alert] = 'You are not authorized to delete this Post.'
+    end
+    redirect_to user_posts_path(id: @user.id)
+  end
+
   private
 
   def post_parameters

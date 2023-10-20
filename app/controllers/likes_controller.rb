@@ -12,7 +12,7 @@ class LikesController < ApplicationController
 
     if @like.save
       flash[:notice] = 'The like is successfully submitted'
-      redirect_to user_post_path(@user, @post)
+      redirect_to user_post_path(@post.author_id, @post)
     else
       flash[:alert] = 'Can not save the like'
       render :new

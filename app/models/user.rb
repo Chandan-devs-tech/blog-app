@@ -21,6 +21,6 @@ class User < ApplicationRecord
   end
 
   def admin?
-    role = "admin"
+    'admin'
   end
 end

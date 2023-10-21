@@ -78,3 +78,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# display Swagger UI
+gem 'rswag-ui'
+# make API requests from Swagger UI
+gem 'rswag-api'

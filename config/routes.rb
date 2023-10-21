@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
   devise_for :users
   resources :users, only: [:index, :show] do

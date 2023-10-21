@@ -216,6 +216,11 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
+    rswag-api (2.11.0)
+      railties (>= 3.1, < 7.2)
+    rswag-ui (2.11.0)
+      actionpack (>= 3.1, < 7.2)
+      railties (>= 3.1, < 7.2)
     rubocop (1.56.4)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -292,6 +297,8 @@ DEPENDENCIES
   rails (~> 7.0.8)
   rails-controller-testing
   rspec-rails
+  rswag-api
+  rswag-ui
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails

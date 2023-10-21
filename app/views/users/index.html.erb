@@ -6,6 +6,6 @@
         <%end%>
     </ul>
     <% if user_signed_in? %>
-        <%= link_to "Log Out", sign_out_user_path, method: :delete %>
+        <%= link_to "Log Out", sign_out_user_path, method: :delete, class: "log-out-btn" %>
     <%end%>
 </div>

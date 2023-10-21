@@ -80,6 +80,6 @@ group :test do
 end
 
 # display Swagger UI
-gem "rswag-ui"
+gem 'rswag-ui'
 # make API requests from Swagger UI
-gem "rswag-api"
+gem 'rswag-api'
